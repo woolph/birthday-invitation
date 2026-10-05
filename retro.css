@@ -212,3 +212,40 @@ button.knopf:active, input.knopf:active { border-style: inset; }
 
 .klein { font-size: 0.8em; }
 .gross { font-size: 1.3em; }
+
+/* -------- CRT-Monitor fuer den Bluescreen */
+.monitor {
+  display: inline-block;
+  background: #d8d4c8;
+  border: 3px outset #f0ece0;
+  border-radius: 10px;
+  padding: 18px 18px 6px 18px;
+  box-shadow: 4px 4px 0 #555;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.monitor img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border: 6px solid #333;
+  border-radius: 6px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.monitor-fuss {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #333;
+  text-align: right;
+  margin-top: 4px;
+}
+.monitor-led {
+  display: inline-block;
+  width: 7px; height: 7px;
+  background: #00ff00;
+  border-radius: 50%;
+  box-shadow: 0 0 4px #00ff00;
+  animation: blink 2s steps(1, end) infinite;
+}
