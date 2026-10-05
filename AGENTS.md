@@ -19,7 +19,7 @@ am 24.10.2026. Bewusst voller Design-Suenden: Frameset, Marquee, Blinken, Comic 
 
 - Keine Build-Tools, keine Frameworks, keine Abhaengigkeiten ausser dem Google-Fonts-Link fuer "Comic Neue".
 - Die WhatsApp-Nummer steht genau einmal in `anmeldung.html` (`WHATSAPP_NUMMER`).
-- Datum und Zaehler-Startwert stehen oben in `retro.js`.
+- Datum und Zaehler-Startwert stehen oben in `retro.js`. Die Rueckmeldefrist (21.10.2026) steht in `einladung.html`, `anmeldung.html` und `banner.html`.
 - Inhalte sind Deutsch, Umlaute als HTML-Entities oder UTF-8.
 - `birthday-invitation.md` ist die Quelle der Texte und wird nicht committet (`.gitignore`).
 - Testen: `firefox --headless --screenshot out.png --window-size=1280,900 file://$PWD/index.html?frames=ja`
