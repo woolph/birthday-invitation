@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wolfgang wird 40 - Anmeldung</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+<link rel="stylesheet" href="retro.css">
+</head>
+<body>
+
+<div class="nur-ohne-frames">
+  <center>
+    <marquee behavior="alternate" scrollamount="4" style="color:#00ff00; font-weight:bold;">
+      *** ANMELDUNG *** Bitte eintragen *** Danke!!! ***
+    </marquee>
+    <h1>&#9733; <span class="regenbogentext">Wolfgang wird 40!</span> &#9733;</h1>
+    <p><b>[ <a href="einladung.html">&laquo; zur&uuml;ck zur Einladung</a> ]</b></p>
+  </center>
+  <hr class="regenbogen">
+</div>
+
+<center>
+  <h1>&#128221; Anmeldung <span class="neu">WICHTIG!</span></h1>
+  <p class="gross" style="color:#ffffff;">Trag dich ein wie in ein G&auml;stebuch von 1997 &ndash;<br>
+  nur dass die Nachricht per <b style="color:#25d366;">WhatsApp</b> bei mir landet.</p>
+</center>
+
+<form class="gaestebuch" id="formular" onsubmit="return absenden();">
+  <fieldset>
+    <legend>Wer bist du?</legend>
+    <label for="name"><b>Name(n):</b></label>
+    <input type="text" id="name" name="name" size="40" maxlength="80" placeholder="z. B. Max &amp; Maxi Mustermann" required>
+  </fieldset>
+
+  <fieldset>
+    <legend>Kommst du?</legend>
+    <label><input type="radio" name="status" value="spielt" checked>
+      <b>Ja!</b> Ich spiele bei <b>Mission Games mit</b> (Eintreffen 10:30 Uhr)</label><br>
+    <label><input type="radio" name="status" value="essen">
+      <b>Ja!</b> Ich komme erst zum <b>Essen ins Waku Waku</b> (ab 13:00 Uhr)</label><br>
+    <label><input type="radio" name="status" value="zaungast">
+      <b>Ja!</b> Ich bin bei Mission Games als <b>Zaungast</b> dabei und danach beim Essen</label><br>
+    <label><input type="radio" name="status" value="nein">
+      <b>Leider nein</b>, ich kann nicht kommen</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Wie viele Personen?</legend>
+    <label for="personen">Wir sind insgesamt</label>
+    <select id="personen" name="personen">
+      <option value="1">1 Person</option>
+      <option value="2">2 Personen</option>
+      <option value="3">3 Personen</option>
+      <option value="4">4 Personen</option>
+      <option value="5">5 Personen</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Noch was? (optional)</legend>
+    <textarea id="bemerkung" name="bemerkung" rows="3" cols="40"
+      placeholder="Unvertr&auml;glichkeiten, Fragen, Komplimente zur Homepage..."></textarea>
+  </fieldset>
+
+  <center>
+    <button type="submit" class="knopf">&#128172; Per WhatsApp abschicken</button>
+    &nbsp;&nbsp;
+    <button type="reset" class="knopf">Zur&uuml;cksetzen</button>
+    <p class="klein">Beim Klick &ouml;ffnet sich WhatsApp mit einer fertigen Nachricht an mich.<br>
+    Du kannst sie vor dem Senden noch &auml;ndern.</p>
+  </center>
+</form>
+
+<center>
+  <p style="color:#ffffff;">&mdash; oder einfach formlos &mdash;</p>
+  <p><a class="whatsapp" id="direkt" href="#">&#128172; Wolfgang direkt schreiben</a></p>
+  <p class="klein" style="color:#c0c0c0;">Kein WhatsApp? Dann wie fr&uuml;her: anrufen, SMS, Brieftaube. Du wei&szlig;t, wie du mich erreichst.</p>
+</center>
+
+<hr class="regenbogen">
+<center class="klein" style="color:#c0c0c0;">
+  <p>[ <a href="einladung.html">&laquo; zur&uuml;ck zur Einladung</a> |
+     <a id="frames-link" href="index.html?frames=ja" target="_top">Frames-Version</a> ]</p>
+  <p>Dieses Formular wurde ohne CGI-Skript und ohne Perl erstellt. Der Webmaster bittet um Verst&auml;ndnis.</p>
+</center>
+
+<script>
+  // ------------------------------------------------------------------
+  // TODO: Eigene WhatsApp-Nummer eintragen! Internationales Format,
+  //       ohne "+", ohne Leerzeichen, ohne fuehrende 0, z. B. 436641234567
+  // ------------------------------------------------------------------
+  var WHATSAPP_NUMMER = '43XXXXXXXXXX';
+
+  var TEXTE = {
+    spielt:   'Ich bin dabei und spiele bei Mission Games mit (Eintreffen 10:30).',
+    essen:    'Ich bin dabei, komme aber erst zum Essen ins Waku Waku (ab 13:00).',
+    zaungast: 'Ich bin dabei, bei Mission Games aber nur als Zaungast, danach beim Essen.',
+    nein:     'Ich kann am 24.10. leider nicht kommen. Schade!'
+  };
+
+  function waLink(text) {
+    return 'https://wa.me/' + WHATSAPP_NUMMER + '?text=' + encodeURIComponent(text);
+  }
+
+  function absenden() {
+    var f = document.getElementById('formular');
+    var name = f.name.value.trim();
+    var status = f.status.value;
+    var personen = f.personen.value;
+    var bemerkung = f.bemerkung.value.trim();
+    var text = 'Hallo Wolfgang! Rueckmeldung zu deinem 40er am 24.10.2026:\n'
+             + 'Name: ' + name + '\n'
+             + TEXTE[status] + '\n';
+    if (status !== 'nein') { text += 'Wir sind ' + personen + ' Person(en).\n'; }
+    if (bemerkung) { text += 'Anmerkung: ' + bemerkung + '\n'; }
+    text += '(gesendet von deiner Homepage, Besucher Nr. ' + (localStorage.getItem('wolfgang40-hits') || '?') + ')';
+    window.open(waLink(text), '_blank');
+    return false;
+  }
+
+  document.getElementById('direkt').href = waLink('Hallo Wolfgang! Wegen deinem 40er am 24.10.: ');
+</script>
+<script src="retro.js"></script>
+</body>
+</html>
