@@ -13,12 +13,12 @@ am 24.10.2026. Bewusst voller Design-Suenden: Frameset, Marquee, Blinken, Comic 
 | `einladung.html`  | Eigentliche Einladung. Eigenstaendig lesbar (Handy), Titelblock wird im Frame per `.in-frame` ausgeblendet |
 | `anmeldung.html`  | Rueckmelde-Formular, erzeugt einen `wa.me`-Link mit vorausgefuelltem Text     |
 | `retro.css`       | Gesamtes Styling, keine externen Bilder (Hintergrund ist Inline-SVG)          |
-| `retro.js`        | Zaehler (localStorage), Countdown, Glitzerspur, Happy Birthday per Web Audio  |
+| `retro.js`        | Zaehler (localStorage), Countdown, Glitzerspur, Happy Birthday als 4-stimmiger NES-Chiptune per Web Audio (Melodie/Akkorde/Bass/Hi-Hat, Tempo `BPM`)  |
 
 ## Regeln
 
 - Keine Build-Tools, keine Frameworks, keine Abhaengigkeiten ausser dem Google-Fonts-Link fuer "Comic Neue".
-- Die WhatsApp-Nummer steht genau einmal in `anmeldung.html` (`WHATSAPP_NUMMER`).
+- Das WhatsApp-Ziel (Nummer oder Benutzername) steht genau einmal in `anmeldung.html` (`WHATSAPP_ZIEL`).
 - Datum und Zaehler-Startwert stehen oben in `retro.js`. Die Rueckmeldefrist (21.10.2026) steht in `einladung.html`, `anmeldung.html` und `banner.html`.
 - Inhalte sind Deutsch, Umlaute als HTML-Entities oder UTF-8.
 - `birthday-invitation.md` ist die Quelle der Texte und wird nicht committet (`.gitignore`).

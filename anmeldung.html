@@ -90,10 +90,14 @@
 
 <script>
   // ------------------------------------------------------------------
-  // TODO: Eigene WhatsApp-Nummer eintragen! Internationales Format,
-  //       ohne "+", ohne Leerzeichen, ohne fuehrende 0, z. B. 436641234567
+  // TODO: Eigenes WhatsApp-Ziel eintragen. Entweder
+  //   a) Telefonnummer international, ohne "+", Leerzeichen und fuehrende 0,
+  //      z. B. '436641234567'   (funktioniert ueberall, empfohlen)
+  //   b) WhatsApp-Benutzername ohne "@", z. B. 'wolfgang'
+  //      (Links der Form wa.me/Benutzername werden seit Sommer 2026
+  //       laenderweise ausgerollt und klappen evtl. nicht bei jedem Gast)
   // ------------------------------------------------------------------
-  var WHATSAPP_NUMMER = '43XXXXXXXXXX';
+  var WHATSAPP_ZIEL = '43XXXXXXXXXX';
 
   var TEXTE = {
     spielt:   'Ich bin dabei und spiele bei Mission Games mit (Eintreffen 10:30).',
@@ -103,7 +107,7 @@
   };
 
   function waLink(text) {
-    return 'https://wa.me/' + WHATSAPP_NUMMER + '?text=' + encodeURIComponent(text);
+    return 'https://wa.me/' + WHATSAPP_ZIEL + '?text=' + encodeURIComponent(text);
   }
 
   function absenden() {
