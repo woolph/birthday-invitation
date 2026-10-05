@@ -18,7 +18,7 @@ am 24.10.2026. Bewusst voller Design-Suenden: Frameset, Marquee, Blinken, Comic 
 ## Regeln
 
 - Keine Build-Tools, keine Frameworks, keine Abhaengigkeiten ausser dem Google-Fonts-Link fuer "Comic Neue".
-- Das WhatsApp-Ziel (Nummer oder Benutzername) steht genau einmal in `anmeldung.html` (`WHATSAPP_ZIEL`).
+- Das WhatsApp-Ziel steht genau einmal in `anmeldung.html` (`WHATSAPP_ZIEL`), aktuell der Benutzername `woolph42` (Fallback waere die Telefonnummer).
 - Datum und Zaehler-Startwert stehen oben in `retro.js`. Die Rueckmeldefrist (21.10.2026) steht in `einladung.html`, `anmeldung.html` und `banner.html`.
 - Inhalte sind Deutsch, Umlaute als HTML-Entities oder UTF-8.
 - `birthday-invitation.md` ist die Quelle der Texte und wird nicht committet (`.gitignore`).

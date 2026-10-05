@@ -38,12 +38,14 @@
 
   <fieldset>
     <legend>Kommst du?</legend>
+    <p class="klein" style="margin-top:0;"><i>Das Essen im Waku Waku ab 13:00 Uhr geh&ouml;rt bei allen &bdquo;Ja&ldquo;-Varianten dazu.
+    Die Frage ist nur, was du vorher machst:</i></p>
     <label><input type="radio" name="status" value="spielt" checked>
-      <b>Ja!</b> Ich spiele bei <b>Mission Games mit</b> (Eintreffen 10:30 Uhr)</label><br>
-    <label><input type="radio" name="status" value="essen">
-      <b>Ja!</b> Ich komme erst zum <b>Essen ins Waku Waku</b> (ab 13:00 Uhr)</label><br>
+      <b>Ja!</b> Ich <b>spiele bei Mission Games mit</b> (Eintreffen 10:30 Uhr) <b>und</b> bin danach beim Essen dabei</label><br>
     <label><input type="radio" name="status" value="zaungast">
-      <b>Ja!</b> Ich bin bei Mission Games als <b>Zaungast</b> dabei und danach beim Essen</label><br>
+      <b>Ja!</b> Ich bin bei Mission Games <b>als Zaungast</b> dabei (Eintreffen 10:30 Uhr) <b>und</b> danach beim Essen</label><br>
+    <label><input type="radio" name="status" value="essen">
+      <b>Ja!</b> Ich lasse Mission Games aus und komme <b>direkt zum Essen</b> (ab 13:00 Uhr)</label><br>
     <label><input type="radio" name="status" value="nein">
       <b>Leider nein</b>, ich kann nicht kommen</label>
   </fieldset>
@@ -97,12 +99,12 @@
   //      (Links der Form wa.me/Benutzername werden seit Sommer 2026
   //       laenderweise ausgerollt und klappen evtl. nicht bei jedem Gast)
   // ------------------------------------------------------------------
-  var WHATSAPP_ZIEL = '43XXXXXXXXXX';
+  var WHATSAPP_ZIEL = 'woolph42';
 
   var TEXTE = {
-    spielt:   'Ich bin dabei und spiele bei Mission Games mit (Eintreffen 10:30).',
-    essen:    'Ich bin dabei, komme aber erst zum Essen ins Waku Waku (ab 13:00).',
-    zaungast: 'Ich bin dabei, bei Mission Games aber nur als Zaungast, danach beim Essen.',
+    spielt:   'Ich bin dabei: Mission Games (Eintreffen 10:30) UND Essen im Waku Waku.',
+    zaungast: 'Ich bin dabei: bei Mission Games als Zaungast (10:30) UND Essen im Waku Waku.',
+    essen:    'Ich bin dabei, lasse Mission Games aber aus und komme direkt zum Essen (13:00).',
     nein:     'Ich kann am 24.10. leider nicht kommen. Schade!'
   };
 
