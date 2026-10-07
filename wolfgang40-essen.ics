@@ -7,7 +7,7 @@ BEGIN:VEVENT
 UID:wolfgang40-essen@woolph.github.io
 DTSTAMP:20261007T055711Z
 DTSTART:20261024T110000Z
-DTEND:20261024T140000Z
+DTEND:20261024T180000Z
 SUMMARY:Wolfgang wird 40: Essen im Waku Waku
 LOCATION:WAKUWAKU\, Hauptplatz 11\, 4020 Linz
 DESCRIPTION:13:00 Essen im WAKUWAKU\, Hauptplatz 11\, 4020 Linz. Ende off
@@ -16,7 +16,7 @@ URL:https://woolph.github.io/birthday-invitation/
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen: Wolfgang wird 40!
+DESCRIPTION:Morgen: Wolfgang feiert seinen 40er!
 END:VALARM
 END:VEVENT
 END:VCALENDAR

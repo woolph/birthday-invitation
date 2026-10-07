@@ -7,7 +7,7 @@ BEGIN:VEVENT
 UID:wolfgang40-ganzer-tag@woolph.github.io
 DTSTAMP:20261007T055711Z
 DTSTART:20261024T084500Z
-DTEND:20261024T140000Z
+DTEND:20261024T180000Z
 SUMMARY:Wolfgang wird 40: Mission Games + Essen
 LOCATION:Mission Games\, Hauptstraße 16\, 4040 Linz
 DESCRIPTION:10:45 Treffpunkt vor den Mission Games (Hauptstraße 16\, 1. 
@@ -18,7 +18,7 @@ URL:https://woolph.github.io/birthday-invitation/
 BEGIN:VALARM
 ACTION:DISPLAY
 TRIGGER:-P1D
-DESCRIPTION:Morgen: Wolfgang wird 40!
+DESCRIPTION:Morgen: Wolfgang feiert seinen 40er!
 END:VALARM
 END:VEVENT
 END:VCALENDAR
