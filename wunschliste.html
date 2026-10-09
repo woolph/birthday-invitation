@@ -16,6 +16,28 @@
   .geheim { background: repeating-linear-gradient(-45deg, #ff0000 0 14px, #000 14px 28px); color: #fff;
             text-align: center; padding: 6px; border: 3px ridge #ff0000; margin: 10px 0; }
   .geheim span { background: #000; padding: 2px 10px; font-weight: bold; letter-spacing: 2px; }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .tooltiptext {
+    visibility: hidden;
+    width: 130px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .tooltiptext {
+    font-size: 0.7em;
+  }
 </style>
 </head>
 <body>
@@ -34,7 +56,8 @@
   <p class="gross">Du hast dich bis hierher durchgeklickt, also meinst du es offenbar ernst.
   Erstens: Das ist nicht n&ouml;tig, ich freue mich &uuml;ber euer Kommen am meisten.
   Zweitens: Wer trotzdem etwas schenken will und nicht r&auml;tseln m&ouml;chte, findet hier
-  <b>Inspiration</b>. Alles davon ist ein Wunsch, nichts davon eine Erwartung.</p>
+  <b>Inspiration</b>. Alles davon ist ein Wunsch, nichts davon eine Erwartung. Wenn Euch selbst was
+  cooles einf&auml;llt, umso besser! <b>Ich liebe &Uuml;berraschungen!</b></p>
 </div>
 
 <h2>&#127873; Die Liste</h2>
@@ -42,29 +65,113 @@
 <table class="wunsch" cellpadding="8" cellspacing="2">
   <tr><th>Produkt</th><th>Preis</th><th>Wo</th></tr>
   <tr>
-    <td><b>Tama HH905D Iron Cobra Hi-Hat St&auml;nder</b></td>
-    <td class="preis">&euro; 349,-</td>
-    <td><a href="https://sam-music.at/Drums-Percussion/Hardware-Zubehoer/TAMA-HH905D-Iron-Cobra-Hi-Hat-Staender.html" target="_blank" rel="noopener">Sam Music</a>, vor Ort in Linz lagernd</td>
+    <td><b>Pandemic Legacy</b> <i>[Brettspiel]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 1099,-
+        <span class="tooltiptext">&euro; 80,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thalia.at/shop/home/artikeldetails/A1038698905" target="_blank" rel="noopener">Thalia</a>, in Linz abholbar oder kurzfristig versandkostenfrei lieferbar</td>
   </tr>
   <tr>
-    <td><b>Tama HP900PWN Iron Cobra Double Kick Pedal</b></td>
-    <td class="preis">&euro; 555,-</td>
-    <td><a href="https://sam-music.at/Drums-Percussion/Hardware-Zubehoer/Fussmaschinen/TAMA-HP900PWN-Iron-Cobra-Double-Power-Glide.html" target="_blank" rel="noopener">Sam Music</a>, vor Ort in Linz lagernd</td>
+    <td><b>Dungeon Lords</b> <i>[Brettspiel]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 649,-
+        <span class="tooltiptext">&euro; 47,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thalia.at/shop/home/artikeldetails/A1009533532" target="_blank" rel="noopener">Thalia</a>, in Linz abholbar oder kurzfristig versandkostenfrei lieferbar</td>
   </tr>
   <tr>
-    <td><b>Strymon Flint v2</b></td>
-    <td class="preis">&euro; 369,-</td>
-    <td><a href="https://www.thomann.at/strymon_flint_v2.htm" target="_blank" rel="noopener">Thomann</a>, in wenigen Tagen versandkostenfrei lieferbar</td>
+    <td><b>Gloomhaven - Die Pranken des Löwen</b> <i>[Brettspiel]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 899,-
+        <span class="tooltiptext">&euro; 65,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thalia.at/shop/home/artikeldetails/A1058611816" target="_blank" rel="noopener">Thalia</a>, in 1-2 Wochen 🫣 versandkostenfrei lieferbar</td>
   </tr>
   <tr>
-    <td><b>Split Fiction (Nintendo Switch)</b></td>
-    <td class="preis">&euro; 45,-</td>
+    <td><b>Arkham Horror: Das Kartenspiel, Grundspiel</b> <i>[Brettspiel]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 1049,-
+        <span class="tooltiptext">&euro; 76,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thalia.at/shop/home/artikeldetails/A1078729191" target="_blank" rel="noopener">Thalia</a>, kurzfristig versandkostenfrei lieferbar</td>
+  </tr>
+  <tr>
+    <td><b>Split Fiction (Nintendo Switch)</b> <i>[Konsolenspiel]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 619,-
+        <span class="tooltiptext">&euro; 45,-</span>
+      </div>
+    </td>
     <td><a href="https://www.mediamarkt.at/de/product/_split-fiction-nintendo-switch-2-2031854.html" target="_blank" rel="noopener">MediaMarkt</a>, abholbar im Haid Center oder in der PlusCity</td>
   </tr>
   <tr>
-    <td><b>MSI Claw 8 AI Polar Tempest Edition</b></td>
+    <td><b>Tama HH905D Iron Cobra Hi-Hat St&auml;nder</b> <i>[Schlagzeug-Zubehör]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 4799,-
+        <span class="tooltiptext">&euro; 349,-</span>
+      </div>
+    </td>
+    <td><a href="https://sam-music.at/Drums-Percussion/Hardware-Zubehoer/TAMA-HH905D-Iron-Cobra-Hi-Hat-Staender.html" target="_blank" rel="noopener">Sam Music</a>, vor Ort in Linz lagernd</td>
+  </tr>
+  <tr>
+    <td><b>Tama HP900PWN Iron Cobra Double Kick Pedal</b> <i>[Schlagzeug-Zubehör]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 7599,-
+        <span class="tooltiptext">&euro; 555,-</span>
+      </div>
+    </td>
+    <td><a href="https://sam-music.at/Drums-Percussion/Hardware-Zubehoer/Fussmaschinen/TAMA-HP900PWN-Iron-Cobra-Double-Power-Glide.html" target="_blank" rel="noopener">Sam Music</a>, vor Ort in Linz lagernd</td>
+  </tr>
+  <tr>
+    <td><b>Strymon Flint v2</b> <i>[E-Gitarren-Effektgerät]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 5099,-
+        <span class="tooltiptext">&euro; 369,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thomann.at/strymon_flint_v2.htm" target="_blank" rel="noopener">Thomann</a>, in wenigen Tagen versandkostenfrei lieferbar</td>
+  </tr>
+  <tr>
+    <td><b>Catalinbread Echorec</b> <i>[E-Gitarren-Effektgerät]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 3599,-
+        <span class="tooltiptext">&euro; 259,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thomann.at/catalinbread_echorec.htm" target="_blank" rel="noopener">Thomann</a>, in wenigen Tagen versandkostenfrei lieferbar</td>
+  </tr>
+  <tr>
+    <td><b>Strymon Deco v2</b> <i>[E-Gitarren-Effektgerät]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 5499,-
+        <span class="tooltiptext">&euro; 398,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thomann.at/strymon_deco_v2.htm" target="_blank" rel="noopener">Thomann</a>, in wenigen Tagen versandkostenfrei lieferbar</td>
+  </tr>
+  <tr>
+    <td><b>L.R. Baggs Anthem SL</b> <i>[A-Gitarren-Pickup]</i></td>
+    <td class="preis">
+      <div class="tooltip">&ouml;S 3499,-
+        <span class="tooltiptext">&euro; 255,-</span>
+      </div>
+    </td>
+    <td><a href="https://www.thomann.at/lrbaggs_anthem_sl.htm" target="_blank" rel="noopener">Thomann</a>, in wenigen Tagen versandkostenfrei lieferbar</td>
+  </tr>
+  <!--<tr>
+    <td><b>MSI Claw 8 AI Polar Tempest Edition</b> <i>[PC]</i></td>
     <td class="preis">&euro; 999,-</td>
     <td><a href="https://www.mediamarkt.at/de/product/_msi-claw-8-ai-polar-tempest-edition-a2vm-091-core-ultra-7-258v-32gb-ram-2tb-ssd-2057715.html" target="_blank" rel="noopener">MediaMarkt</a>, kurzfristig lieferbar</td>
+  </tr>-->
+  <tr>
+    <td><smaller>Knusperkiste?</smaller></td>
+    <td class="preis">?</td>
+    <td>?</td>
   </tr>
 </table>
 </center>

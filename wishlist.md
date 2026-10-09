@@ -9,7 +9,9 @@
 | MSI Claw 8 AI Polar Tempest Edition        | €999,- | [Mediamarkt](https://www.mediamarkt.at/de/product/_msi-claw-8-ai-polar-tempest-edition-a2vm-091-core-ultra-7-258v-32gb-ram-2tb-ssd-2057715.html) kurzfristig lieferbar |
 
 
-
-
-Kommt sowieso erst am 19. Oktober 2026 raus, daher nicht ideal für
-| Magic the Gathering Festival in a Box Atlanta 2026 |  | |
+Airfryer?
+https://www.thomann.at/danelectro_sitar_bundle.htm
+Beamer?
+Tennisbälle
+Tenniskorb
+Tennisschläger Saiten
