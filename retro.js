@@ -225,8 +225,35 @@
     setTimeout(function () { spielt = false; knopf.textContent = alt; }, (to - ctx.currentTime) * 1000 + 100);
   }
 
+  /* -------- Dankeschoen-Overlay (nach der Feier) */
+  function dankeOverlay() {
+    // Im Frameset nur im Inhalts-Frame zeigen, nicht in Banner und Navigation
+    if (window.top !== window.self && window.name !== 'inhalt') { return; }
+    try { if (sessionStorage.getItem('wolfgang40-danke')) { return; } } catch (e) {}
+    var ov = document.createElement('div');
+    ov.id = 'danke-overlay';
+    ov.innerHTML =
+      '<div class="box">' +
+      '<p><img src="geschenk.gif" width="48" height="48" alt=""> ' +
+      '<img src="geschenk.gif" width="48" height="48" alt=""> ' +
+      '<img src="geschenk.gif" width="48" height="48" alt=""></p>' +
+      '<h1><span class="regenbogentext">Dankeschön!</span></h1>' +
+      '<p class="gross">Herzlichen Dank für die schöne Feier, fürs Miträtseln, Mitessen, ' +
+      'für die Geschenke und für euer Kommen. Es war ein wunderbarer Tag!</p>' +
+      '<p class="gross"><b>Wolfgang</b></p>' +
+      '<p><button class="knopf" type="button">Weiter zur Seite</button></p>' +
+      '<p class="klein">Die Party ist vorbei, die Homepage bleibt. Für die Nostalgie.</p>' +
+      '</div>';
+    ov.querySelector('button').addEventListener('click', function () {
+      try { sessionStorage.setItem('wolfgang40-danke', '1'); } catch (e) {}
+      ov.parentNode.removeChild(ov);
+    });
+    document.body.appendChild(ov);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     zaehler();
+    dankeOverlay();
     countdown();
     document.addEventListener('mousemove', glitzer);
     var k = document.getElementById('midi');

@@ -249,3 +249,19 @@ button.knopf:active, input.knopf:active { border-style: inset; }
   box-shadow: 0 0 4px #00ff00;
   animation: blink 2s steps(1, end) infinite;
 }
+
+/* -------- Dankeschoen-Overlay nach der Feier */
+#danke-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0, 0, 51, 0.92);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 20px; box-sizing: border-box;
+}
+#danke-overlay .box {
+  max-width: 560px; border-width: 6px;
+  background-color: #c0c0c0; opacity: 1;
+  animation: danke-rein 0.4s ease-out;
+}
+#danke-overlay h1 { font-size: 2.6em; margin: 10px 0; text-shadow: none; }
+#danke-overlay h1 .regenbogentext { text-shadow: none; }
+@keyframes danke-rein { from { transform: scale(0.3) rotate(-10deg); opacity: 0; } to { transform: none; opacity: 1; } }

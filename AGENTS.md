@@ -13,16 +13,15 @@ am 24.10.2026. Bewusst voller Design-Suenden: Frameset, Marquee, Blinken, Comic 
 | `einladung.html`  | Eigentliche Einladung. Eigenstaendig lesbar (Handy), Titelblock wird im Frame per `.in-frame` ausgeblendet |
 | `anmeldung.html`  | Rueckmelde-Formular, erzeugt einen `wa.me`-Link mit vorausgefuelltem Text     |
 | `kalender.html`   | ICS-Download (ganzer Tag / nur Essen) plus Google- und Outlook-Links           |
-| `wunschliste.html`| Versteckte Geschenk-Wunschliste (noindex), nur per Direktlink und ueber das Easteregg `geschenk.gif` in Fusszeile von `einladung.html` und `nav.html` erreichbar. Nicht ins Menue aufnehmen. |
+| `wunschliste.html`| Ehemalige Wunschliste, seit 2026-10-28 nur noch eine Dankeschoen-Seite. Weiterhin ueber das Easteregg `geschenk.gif` erreichbar. |
 | `retro.css`       | Gesamtes Styling, keine externen Bilder (Hintergrund ist Inline-SVG)          |
-| `retro.js`        | Zaehler (localStorage), Countdown, Glitzerspur, Happy Birthday als 4-stimmiger NES-Chiptune per Web Audio (Melodie/Akkorde/Bass/Hi-Hat, Tempo `BPM`)  |
+| `retro.js`        | Zaehler (localStorage), Countdown, Glitzerspur, Dankeschoen-Overlay nach der Feier (`dankeOverlay`, einmal pro Browser-Sitzung, nur im Inhalts-Frame), Happy Birthday als 4-stimmiger NES-Chiptune per Web Audio (Melodie/Akkorde/Bass/Hi-Hat, Tempo `BPM`)  |
 
 ## Regeln
 
 - Keine Build-Tools, keine Frameworks, keine Abhaengigkeiten ausser dem Google-Fonts-Link fuer "Comic Neue".
 - `wolfgang40.ics` und `wolfgang40-essen.ics` werden mit `python3 tools/make-ics.py` erzeugt (Zeiten dort in UTC, 24.10.2026 ist noch Sommerzeit). Bei Zeitaenderungen auch die Google-/Outlook-Links in `kalender.html` anpassen.
 - Bilder: `bluescreen.gif` (`python3 tools/make-bluescreen.py`) und `geschenk.gif` (`python3 tools/make-geschenk.py`), beide brauchen Pillow. Texte des Bluescreens stehen im Skript.
-- `wishlist.md` ist die Quelle fuer `wunschliste.html`.
 - `gruppe-qr.svg` (QR-Code zur WhatsApp-Geschenke-Gruppe) wird mit `python3 tools/make-qr.py` erzeugt, braucht das Paket `segno` (venv).
 - Das WhatsApp-Ziel steht genau einmal in `anmeldung.html` (`WHATSAPP_ZIEL`), aktuell die Telefonnummer (Benutzername `woolph42` hat Stand 2026-10-05 noch nicht funktioniert).
 - Datum und Zaehler-Startwert stehen oben in `retro.js`. Die Rueckmeldefrist (21.10.2026) steht in `einladung.html`, `anmeldung.html` und `banner.html`.
