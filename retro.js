@@ -253,7 +253,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     zaehler();
-    dankeOverlay();
+    //dankeOverlay();
     countdown();
     document.addEventListener('mousemove', glitzer);
     var k = document.getElementById('midi');
